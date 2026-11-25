@@ -293,6 +293,13 @@
                         (celular ? 'Celular: ' + celular : '') + '\n' +
                         (email ? 'E-mail: ' + email : '');
             window.open('https://wa.me/5511992845191?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+
+            document.getElementById('nome').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('celular').value = '';
+            document.getElementById('mensagem').value = '';
+            document.getElementById('nome').focus();
+
         }
     }
 </script>
