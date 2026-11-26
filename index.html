@@ -204,6 +204,8 @@
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
                 <form method="post">
+
+                    <h5 class="text-center" style="color: #f00; display: none" id="msg-erro">Preencha o campo nome.</h5>
                     
                     <!-- Name input-->
                    
@@ -284,6 +286,8 @@
         var nome = document.getElementById('nome').value.trim();
         if(nome == ''){
 
+            document.getElementById('msg-erro').style.display = 'block';
+
         } else {      
             var celular = document.getElementById('celular').value.trim();
             var email = document.getElementById('email').value;
@@ -298,6 +302,7 @@
             document.getElementById('email').value = '';
             document.getElementById('celular').value = '';
             document.getElementById('mensagem').value = '';
+            document.getElementById('msg-erro').style.display = 'none';
             document.getElementById('nome').focus();
 
         }
